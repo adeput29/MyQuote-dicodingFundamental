@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.myquote"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.myquote"
@@ -33,9 +33,14 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+    buildFeatures{
+        viewBinding = true
+    }
 }
 
 dependencies {
+    implementation("com.loopj.android:android-async-http:1.4.9")
 
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
